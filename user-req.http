@@ -1,0 +1,59 @@
+### Register User
+POST  http://localhost:4000/auth-api/users
+Content-Type: application/json
+
+{
+    "firstName":"user1",
+    "lastName":"",
+    "email":"user1@gmail.com",
+    "password":"user1",
+    "role":"USER",
+    "profileImageUrl":"https://example.com/avatars/user.png"
+}
+
+
+### login
+POST http://localhost:4000/auth-api/login
+Content-Type: application/json
+
+{
+    "email":"user1@gmail.com",
+    "password":"user1"
+}
+
+### logout
+GET http://localhost:4000/auth-api/logout
+
+
+###update article by author
+PUT http://localhost:4000/author-api/article
+Content-Type: 
+
+{
+    "articleId":"69hdbcj3445",
+    "title":"Article-2 by author 1",
+    "Category":"AI",
+    "content":"test article on AI and its update"
+}
+
+### Read articles of all authors
+GET http://localhost:4000/user-api/articles
+
+
+###add comment by user to an article
+PUT http://localhost:4000/user-api/articles
+Content-Type: application/json
+
+{
+    "articleId":"",
+    "comment":""
+}
+
+### change pw
+PUT http:/localhost:4000/auth-api/password
+Content-Type: 
+
+{
+    "currentPassword":"",
+    "newPassword":""
+}

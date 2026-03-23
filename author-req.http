@@ -1,0 +1,45 @@
+### Register User
+POST  http://localhost:4000/auth-api/users
+Content-Type: application/json
+
+{
+    "firstName":"author2",
+    "lastName":"",
+    "email":"author2@gmail.com",
+    "password":"author2",
+    "role":"AUTHOR",
+    "profileImageUrl":"https://example.com/avatars/user.png"
+}
+
+###
+POST http://localhost:4000/auth-api/login
+Content-Type: application/json
+
+{
+    "email":"author1@gmail.com",
+    "password":"author1"
+}
+### create new Article
+POST http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+    "author":"",
+    "title":"Article-1 by author-1",
+    "category":"programing",
+    "content":"test article on programming"
+}
+
+
+###
+GET http://localhost:4000/auth-api/logout
+
+
+###delete article by article id(soft data)
+Patch http://localhost:4000/author-api/article
+Content-Type: 
+
+{
+    "articleId":""
+    "isArticleActive":true
+}
